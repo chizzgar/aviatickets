@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+
+.container {
+  display: grid; 
+  grid-template-columns:  0.8fr 1.3fr 1.1fr;
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "sidebar main main"
+    "sidebar main main"
+    "sidebar main main";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar {
+  max-height: 23%;
+  grid-area: sidebar;
+  background-color: #D9D9D9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main {
+ 
+  grid-area: main;
+  padding: 1rem 3rem 2rem 3rem;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1, h2, h3, h4 {
+  color: #757571;
+}
+
+.flightHead, .times {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.places {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flightHead {
+  background-color: #0087C9;
+  color: #fff;
+padding: 0.5rem 1rem
+}
+
+.transfersNormal {
+  margin: 0 2rem;
+  display: flex;
+  white-space: nowrap;
+}
+
+.transfers {
+  text-align: center;
+  margin: 0 2rem;
+}
+
+.transfers div {
+  padding: 0 0.5rem;
+  background-color: #fff;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  width: min-content;
+  margin: 0 auto;
+}
+
+.transfers:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: -0.625rem 0 0 0;
+  z-index: 0;
+}
+
+ .btn {
+  color: #fff;
+  border: none;
+  height: 50px;
+  width: 100%;
+  background-color: #FFB168;
+ }
+
+ .convertBtn {
+  text-align: center;
+  width: 100%;
+ }
+
+ .btnMore {
+
+  font-size: 20px;
+  height: 35px;
+  width: 40%;
+ }
+
+ .places, .times {
+   margin: 10px 20px 10px 20px;
+ }
+
+.transfersNormal {
+  margin: 0 20px 0 20px;
 }
